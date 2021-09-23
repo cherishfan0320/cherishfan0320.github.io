@@ -116,18 +116,10 @@ input, select, textarea {
 /* Type */
 
 	html {
-		font-size: 16pt;
+		font-size: 15pt;
 	}
 
 		@media screen and (max-width: 1680px) {
-
-			html {
-				font-size: 12pt;
-			}
-
-		}
-
-		@media screen and (max-width: 1280px) {
 
 			html {
 				font-size: 11pt;
@@ -135,10 +127,18 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 360px) {
+		@media screen and (max-width: 1280px) {
 
 			html {
 				font-size: 10pt;
+			}
+
+		}
+
+		@media screen and (max-width: 360px) {
+
+			html {
+				font-size: 9pt;
 			}
 
 		}
@@ -151,7 +151,7 @@ input, select, textarea {
 		font-family: "Merriweather", Georgia, serif;
 		font-weight: 300;
 		font-size: 1rem;
-		line-height: 2.375;
+		line-height: 2;
 	}
 
 	a {
@@ -185,7 +185,7 @@ input, select, textarea {
 	h1, h2, h3, h4, h5, h6 {
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-weight: 900;
-		line-height: 1.5;
+		line-height: 1.3;
 		letter-spacing: 0.075em;
 		text-transform: uppercase;
 		margin: 0 0 1rem 0;
@@ -199,13 +199,13 @@ input, select, textarea {
 
 	h1 {
 		font-size: 4rem;
-		line-height: 1.1;
+		line-height: 1;
 		margin: 0 0 2rem 0;
 	}
 
 	h2 {
 		font-size: 1.75rem;
-		line-height: 1.3;
+		line-height: 1;
 		margin: 0 0 1.5rem 0;
 	}
 
@@ -262,7 +262,7 @@ input, select, textarea {
 
 		pre code {
 			display: block;
-			line-height: 1.75;
+			line-height: 1.55;
 			padding: 1rem 1.5rem;
 			overflow-x: auto;
 		}
@@ -2109,7 +2109,7 @@ input, select, textarea {
 			position: relative;
 			width: 4rem;
 			height: 4rem;
-			line-height: 4rem;
+			line-height: 2rem;
 			border-radius: 4rem;
 			text-indent: 4rem;
 			overflow: hidden;
@@ -3517,7 +3517,7 @@ input, select, textarea {
 		-webkit-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
-		height: 20rem;
+		height: 10rem;
 		padding-bottom: 8rem;
 		position: relative;
 		text-align: center;
@@ -3568,7 +3568,7 @@ input, select, textarea {
 			/*border-style: solid;*/
 			/*border-color: #ffffff;*/
 			/*border-width: 5px !important;*/
-			font-family: 'Amatic SC', cursive;
+			/* font-family: 'Amatic SC', cursive; */
 			font-size: 2.25rem;
 			font-weight: 900;
 			letter-spacing: 0.075em;
@@ -3626,7 +3626,7 @@ input, select, textarea {
 		padding: 0 2rem 0 0;
 		position: relative;
 		width: calc(100% - 4rem);
-		max-width: 72rem;
+		max-width: 90rem;
 		z-index: 2;
 	}
 
@@ -3715,7 +3715,7 @@ input, select, textarea {
 					-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 					transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 					display: block;
-					font-size: 0.8rem;
+					font-size: 1rem;
 					outline: none;
 					padding: 0 2rem;
 				}
@@ -3764,13 +3764,13 @@ input, select, textarea {
 		position: relative;
 		margin: 0 auto;
 		width: calc(100% - 4rem);
-		max-width: 72rem;
+		max-width: 90rem;
 		z-index: 2;
 	}
 
 		#main > * {
 			padding: 4rem 4rem 2rem 4rem ;
-			border-top: solid 2px #eeeeee;
+			border-top: solid 1px #eeeeee;
 			margin: 0;
 		}
 
@@ -3783,7 +3783,7 @@ input, select, textarea {
 		}
 
 		#main > .post {
-			padding: 8rem 8rem 6rem 8rem ;
+			padding: 5rem 5rem 3rem 5rem ;
 		}
 
 			#main > .post header.major > .date {
@@ -3803,7 +3803,7 @@ input, select, textarea {
 			@media screen and (max-width: 1280px) {
 
 				#main > .post {
-					padding: 6rem 4rem 4rem 4rem ;
+					padding: 4rem 4rem 4rem 4rem ;
 				}
 
 			}
@@ -3811,7 +3811,7 @@ input, select, textarea {
 			@media screen and (max-width: 736px) {
 
 				#main > .post {
-					padding: 4rem 2rem 2rem 2rem ;
+					padding: 2rem 2rem 2rem 2rem ;
 				}
 
 					#main > .post header.major > .date {
@@ -3861,7 +3861,7 @@ input, select, textarea {
 			}
 
 			#main > .posts > * {
-				padding: 4rem;
+				padding: 3rem;
 				width: 50%;
 			}
 
@@ -3892,7 +3892,7 @@ input, select, textarea {
 				}
 
 				#main > .posts > * {
-					padding: 2.5rem;
+					padding: 2rem;
 					width: 50%;
 				}
 
@@ -3914,7 +3914,7 @@ input, select, textarea {
 				}
 
 				#main > .posts > article:nth-child(-n + 2) {
-					border-top-width: 2px;
+					border-top-width: 1px;
 				}
 
 				#main > .posts > article:nth-child(n) {
@@ -3926,7 +3926,7 @@ input, select, textarea {
 				}
 
 				#main > .posts > article .image {
-					max-width: 25rem;
+					max-width: 15rem;
 					margin-left: auto;
 					margin-right: auto;
 				}
@@ -3963,7 +3963,7 @@ input, select, textarea {
 		position: relative;
 		margin: 0 auto;
 		width: calc(100% - 4rem);
-		max-width: 72rem;
+		max-width: 90rem;
 		z-index: 2;
 	}
 
@@ -4400,7 +4400,7 @@ input, select, textarea {
 		text-transform: uppercase;
 		margin: 4rem auto 8rem auto;
 		width: calc(100% - 4rem);
-		max-width: 72rem;
+		max-width: 90rem;
 		z-index: 2;
 	}
 
@@ -4617,8 +4617,8 @@ input, select, textarea {
 			color: #909498;
 			cursor: pointer;
 			display: block;
-			height: 3.25rem;
-			line-height: 3.25rem;
+			height: 3rem;
+			line-height: 3rem;
 			padding-right: 1.25rem;
 			position: absolute;
 			right: 0;
@@ -4654,7 +4654,7 @@ input, select, textarea {
 
 				#navPanel .close {
 					height: 4rem;
-					line-height: 4rem;
+					line-height: 2rem;
 				}
 
 			}
