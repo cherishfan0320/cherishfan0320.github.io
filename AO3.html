@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Cherish&AO3</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap');
+		</style>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<header id="header">
+				</header>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul class="links">
+						<li><a href="index.html">Overview</a></li>
+						<li><a href="experience.html">Experience</a></li>
+						<li><a href="projects.html"><a href="projects.html">Projects</a></li>
+						<li class="active">My Art</a></li>
+						<li><a href="index.html">More About Me</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<p><font size="+0.5">This is a personal side project of mine.<br/>
+I'm a girl who likes to read fanfics, so after learning some python basics my freshman year,
+I created a command-line interface for AO3 web scrapper for fandom tags.<br/>
+
+This command line looks like:</p>
+								<pre><code>def data_menu(sp,target):
+print("""
+Please, pick a data you are interested in:
+1.Rating
+2.Warning
+3.Categories
+4.fandoms
+5.Characters
+6.relationships
+7.additional tags
+""")</code></pre>
+
+<p><font size="+0.5">So we can investigate the newest data about this seven aspects.<br/>
+
+and for each kinds of data_menu, lets say from the "4. fandom part", the code lloks like this. I used regular expressions, and the code was customized by investigate HTML code on the AO3 page：</p>
+
+<pre><code>elif ans=="4":
+print("\nInformation about fandoms for "+target)
+current_part=sp.find("dd", {'class':'expandable fandom tags'})
+for tag in current_part.find_all("li"):
+	tag=str(tag)
+	#print(tag+"\n")
+	find_data=re.compile(r'<span aria-hidden="true" class="indicator"></span><span>(.*)</span>')
+	tag_data=re.findall(find_data, tag)
+	print(tag_data)</code></pre>
+
+	<p><font size="+0.5">And while I am wondering which couple is the most famous in a work(like from Marvel Universe, is Steve Rogers/Tony Stark more famous, or Steve Rogers/James Barnes more famous; or which one has more fandoms?), I used this code:</p>
+
+		<pre><code>def ao3_work_sort():
+target = input('which work/relationships do you want to search?')
+status=True
+sp=getData(target)
+print("\\nSome very likely tag name "+target+":\\n")
+if '/' in target:#如果有/，那么应该是relationships
+    print("\\nInformation about relationships for "+target)
+    current_part=sp.find("dd", {'class':'expandable relationship tags'})
+    for tag in current_part.find_all("li"):
+        tag=str(tag)
+        #print(tag+"\\n")
+        find_data=re.compile(r'<span aria-hidden="true" class="indicator"></span><span>(.*)</span>')
+        tag_data=re.findall(find_data, tag)
+        print(str(tag_data)[2:-2])
+else:
+    current_part=sp.find("dd", {'class':'expandable fandom tags'})
+    for tag in current_part.find_all("li"):
+        tag=str(tag)
+        #print(tag+"\\n")
+        find_data=re.compile(r'<span aria-hidden="true" class="indicator"></span><span>(.*)</span>')
+        tag_data=re.findall(find_data, tag)
+        print(str(tag_data)[2:-2] )
+
+#need to get precise fandom/character relationship tag
+while status==True:
+    tag_tar=input("which one do you want for tag?")
+    work_menu(tag_tar)
+    continue_response=input('do you want more information?(y/n)')
+    if (continue_response=='y'):
+        status=True
+    elif(continue_response=='n'):
+        status=False
+    else:
+        continue_response=input('invalid text, please enter again')
+#print(soup)</code></pre>
+
+<p><font size="+0.5">And I had a lot of fun:)</p>
+
+							</section>
+							</div>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Yixuan-Cherish Fan</li></ul>
+					</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+
+
+
+
+
+</html>
